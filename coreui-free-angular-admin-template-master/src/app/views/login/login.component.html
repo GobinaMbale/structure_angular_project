@@ -1,0 +1,46 @@
+<ngx-spinner [fullScreen]="true" bdColor="rgba(0,0,0,0.30)" size="medium" color="#dd4b39" type="ball-clip-rotate-multiple"></ngx-spinner>
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <form (ngSubmit)="login()" [formGroup]="loginForm">
+                  <h1>Connexion</h1>
+                  <div class="alert alert-danger" *ngIf="authenticationError">
+                    <strong>La connexion a échoué !</strong> Veuillez vérifier vos informations d'identification et réessayer.
+                  </div>
+                  <p class="text-muted">Connectez-vous à votre compte</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" formControlName="username" class="form-control" placeholder="Nom d'utilisateur" autocomplete="username">
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Mot de passe" autocomplete="current-password" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary px-4" style="width: 100%">Se connecter</button>
+                </form>
+              </div>
+            </div>
+            <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+              <div class="card-body text-center">
+                <div class="align-self-center" style="margin-top: 20%">
+                  <h2>GESTION DES STAGIAIRES</h2>
+                  <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <button type="button" class="btn btn-primary active mt-3">Register Now!</button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
